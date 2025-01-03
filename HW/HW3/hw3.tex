@@ -1,0 +1,154 @@
+\documentclass{article} % Defines the document class, article is commonly used
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}    % Allows for more advanced math formatting
+\usepackage{amssymb}    % Provides additional mathematical symbols
+\usepackage{amsthm}     % \qed
+\usepackage{graphicx}   % image
+\usepackage{float}      % image placement
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,       % color of internal links
+}
+\usepackage[margin=1.5in]{geometry}
+
+\begin{document}
+
+\title{MAT115A HW3}
+\author{Tao Wang}
+\date{\today}
+
+\maketitle
+
+\section*{Exercise 1}
+
+\bigskip
+\noindent
+\textbf{Question}: Find all positive integer $m$ for which $-7 \equiv 6 \mod m$ is true.
+
+\bigskip
+\noindent
+\textbf{Answer}:
+
+\begin{quote}
+    Find all $m \in \mathbb{Z}^+$ such that $m \mid -7 - 6$.
+
+    $m = 1, 13$.
+\end{quote}
+
+\section*{Exercise 2}
+\bigskip
+\noindent
+\textbf{Question}: Let $a, b \in \mathbb{Z}$ such that $a \equiv b \mod m$. Prove that $(a, m) = (b, m)$.
+
+\bigskip
+\noindent
+\textbf{Answer}:
+\begin{quote}
+
+    Since $a \equiv b \mod m$, we have $m \mid a - b$, this implies $a - b = nm$ and $a - nm = b$ for $n \in \mathbb{Z}$.
+\end{quote}
+\begin{align*}
+     & (a, m)                                       &                                  \\
+     & = (a - nm, m), \text{ for } n \in \mathbb{Z} & (\text{The Euclidean Algorithm}) \\
+     & = (b, m)                                     & (\text{Assumption})              \\
+\end{align*}
+\pagebreak
+\section*{Exercise 3}
+\bigskip
+\noindent
+\textbf{Question}: Let $a \in \mathbb{Z}$. Show that $a$ is odd if and only if $a^2 \equiv 1 \mod 8$.
+
+\bigskip
+\noindent
+\textbf{Answer}:
+
+\begin{quote}
+    We will first show that a is odd implies $a^2 \equiv 1 \mod 8$.
+    a is odd implies $a = 2m + 1$, for $m \in \mathbb{Z}$. Therefore,
+    \[a^2 = 4m^2 + 4m + 1\]
+    \[a^2 - 1 = 4m^2 + 4m = 4(m^2 + m)\]
+
+    If m is even ($m = 2n$), then
+    \[a^2 - 1 = 8(2n^2 + n)\]
+
+    If m is odd ($m = 2n + 1$), then
+    \[a^2 - 1 = 8(2n^2 + 3n + 1)\]
+
+    In both cases, $8 \mid a^2 - 1$, which means $a^2 \equiv 1 \mod 8$.
+
+    Now, we will show $a^2 \equiv 1 \mod 8$ implies $a$ is odd.
+
+    $a^2 \equiv 1 \mod 8$ implies $a^2 - 1 = 8m$, for $m \in \mathbb{Z}$. Therefore, $a^2 = 2 (4m) + 1$.
+
+    Since $a^2$ is odd, $a$ must be odd.
+\end{quote}
+
+\section*{Exercise 4} Find all incongruent solutions to the following congruences.
+
+\section*{Exercise 4 (a)}
+\bigskip
+\noindent
+\textbf{Question}: $12x \equiv 16 \mod 32$
+
+\bigskip
+\noindent
+\textbf{Answer}:
+\begin{center}
+    \[(12, 32) = 4\]
+
+    Since $16 = (4)(4)$, there are 4 incongruent solution.
+    \[4 + \left(\frac{32}{4}n\right), n = 0, 1, 2, 3\]
+    \[\text{Incongruent Solution: }4, 12, 20, 28\]
+
+\end{center}
+
+\section*{Exercise 4 (b)}
+\bigskip
+\noindent
+\textbf{Question}: $481x \equiv 627 \mod 703$
+
+\bigskip
+\noindent
+\textbf{Answer}:
+\begin{center}
+    \[(481, 703) = 37\]
+
+    Since $37 \nmid 627$, there is no solution.
+\end{center}
+
+\section*{Exercise 5}
+Find an inverse modulo $m$ for the integer $n$.
+
+\section*{Exercise 5(a)}
+\bigskip
+\noindent
+\textbf{Question}: $m = 17, n = 4$
+
+\bigskip
+\noindent
+\textbf{Answer}:
+\begin{center}
+    \[4x \equiv 1 \mod 17\]
+    \[(4, 17) = 1\]
+    \[13 + 17n, n = 0\]
+    \[4^{-1} \equiv 13 \mod 17\]
+\end{center}
+
+\section*{Exercise 5(b)}
+\bigskip
+\noindent
+\textbf{Question}: $m = 35, n = 8$
+
+\bigskip
+\noindent
+\textbf{Answer}:
+\begin{center}
+    \[8x \equiv 1 \mod 35\]
+    \[(35, 8) = 1\]
+    \[1 \mid 1\]
+    \[22 + 35n, n = 0\]
+    \[8^{-1} \equiv 22 \mod 35\]
+\end{center}
+
+\end{document}
