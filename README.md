@@ -1,6 +1,6 @@
 # MAT115A - Number Theory
 
-This repository contains homework answers of MAT115A from University of California, Davis in Fall 2024. This course studies the real number and asks students to prove theorems related to the real numbers.
+This repository contains homework answers for MAT115A from the University of California, Davis in Fall 2024. This course studies prime numbers and the pattern of different numbers having the same remainder when divided by another number.
 
 **Be aware that the homework answers might be incorrect. Use at your own discretion. The author does not have any responsibility over the consequences of using these materials.**
 
